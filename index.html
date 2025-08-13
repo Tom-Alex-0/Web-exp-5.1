@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <div>
-        <h1 style="text-align: center;">Simple Calculator</h1>
-        <center>
-            <input type="text" id="n1"> <br>
-            <input type="text" id="n2">
-            <br>
-            <button>Add</button>
-            <button>Subtract</button> 
-            <br>
-            <button>Multiply</button>
-            <button>Divide</button>
-            <div id="output"></div>
-        </center>
+    <div class="calculator-container">
+        <h1>Simple Calculator</h1>
+        <input type="text" id="n1" placeholder="First number"> <br>
+        <input type="text" id="n2" placeholder="Second number">
+        <br>
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('sub')">Subtract</button> 
+        <br>
+        <button onclick="calculate('mul')">Multiply</button>
+        <button onclick="calculate('div')">Divide</button>
+
+        <!-- Output -->
+        <div id="output"></div>
     </div>
 </body>
 </html>
