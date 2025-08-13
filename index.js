@@ -4,25 +4,29 @@ function calculate(operation) {
 
     let result;
 
-    switch (operation) {
-        case 'add':
-            result = num1 + num2;
-            break;
-        case 'sub':
-            result = num1 - num2;
-            break;
-        case 'mul':
-            result = num1 * num2;
-            break;
-        case 'div':
-            if (num2 !== 0) {
-                result = num1 / num2;
-            } else {
-                result = "Error: Division by zero";
-            }
-            break;
-        default:
-            result = "Invalid operation";
+    if (isNaN(num1) || isNaN(num2)) {
+        result = "Error: Please enter valid numbers";
+    } else {
+        switch (operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'sub':
+                result = num1 - num2;
+                break;
+            case 'mul':
+                result = num1 * num2;
+                break;
+            case 'div':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    result = "Error: Division by zero";
+                }
+                break;
+            default:
+                result = "Invalid operation";
+        }
     }
 
     document.querySelector("#output").innerHTML = "Result: " + result;
